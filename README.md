@@ -1,65 +1,134 @@
-index.html
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portal da Agronomia</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+style.css
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <header>
-        <h1>Cultivando o Futuro</h1>
-        <p>Tudo sobre o mundo da Agronomia e do Agronegócio</p>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#tecnologias">Tecnologias</a></li>
-                <li><a href="#calculadora">Simulador</a></li>
-            </ul>
-        </nav>
-    </header>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f4; 
+    color: #2c3e2f; 
+    line-height: 1.6;
+}
 
-    <main>
-        <section id="inicio">
-            <h2>Bem-vindo ao Portal da Agronomia</h2>
-            <p>A agronomia une a ciência, a tecnologia e a natureza para alimentar o mundo de forma sustentável. Explore nosso site para saber mais sobre manejo de solo, culturas e inovações no campo.</p>
-        </section>
+/* Cabeçalho (Header) */
+header {
+    background-color: #2e5a36; 
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+}
 
-        <section id="sobre">
-            <h2>O que é Agronomia?</h2>
-            <p>É o campo da ciência que estuda as práticas agrícolas, buscando otimizar a produção de alimentos, fibras e energia, respeitando o meio ambiente.</p>
-        </section>
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
 
-        <section id="tecnologias">
-            <h2>Tecnologias no Campo</h2>
-            <ul>
-                <li><strong>Agricultura de Precisão:</strong> Uso de GPS e sensores para mapear a lavoura.</li>
-                <li><strong>Drones:</strong> Monitoramento aéreo de pragas e saúde do solo.</li>
-                <li><strong>Sustentabilidade:</strong> Técnicas de irrigação inteligente e rotação de culturas.</li>
-            </ul>
-        </section>
+header p {
+    font-style: italic;
+    color: #a3e2a9; 
+    margin-bottom: 20px;
+}
 
-        <section id="calculadora">
-            <h2>Simulador de Necessidade de Calagem</h2>
-            <p>Insira o pH atual do seu solo para verificar se ele precisa de calcário:</p>
-            
-            <div class="Abas-calculo">
-                <label for="phSolo">pH do Solo:</label>
-                <input type="number" id="phSolo" step="0.1" min="0" max="14" placeholder="Ex: 5.2">
-                <button id="btnCalcular">Verificar Solo</button>
-            </div>
+/* Menu de Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 
-            <div id="resultado"></div>
-        </section>
-    </main>
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
 
-    <footer>
-        <p>&copy; 2026 Meu Site de Agronomia. Hospedado com ❤️ no GitHub.</p>
-    </footer>
+nav a:hover {
+    background-color: #1e3d24; 
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+/* Conteúdo Principal (Main) */
+main {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Seções */
+section {
+    background-color: #ffffff; 
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); 
+}
+
+section h2 {
+    color: #8b5a2b; 
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e2ded0;
+    padding-bottom: 5px;
+}
+
+section ul {
+    list-style-position: inside;
+    margin-top: 10px;
+}
+
+section li {
+    margin-bottom: 10px;
+}
+
+/* Elementos da Calculadora Interativa */
+.Abas-calculo {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#phSolo {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    max-width: 100px;
+}
+
+#btnCalcular {
+    background-color: #2e5a36;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+#btnCalcular:hover {
+    background-color: #1e3d24;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Rodapé (Footer) */
+footer {
+    background-color: #1e3d24; 
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
